@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="1480" viewBox="0 0 780 1480">
+  <rect width="780" height="1480" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="390" y="46" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="30" font-weight="700" fill="#0f172a">Deep Research 的 13 步工作流</text>
+  <text x="390" y="80" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">四个阶段，两次回流：计划不是一次性的，检索也不是</text>
+
+  <!-- 阶段 1：理解与计划 -->
+  <rect x="35" y="120" width="85" height="334" rx="14" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="77.5" y="253" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12.5" font-weight="700" fill="#2563eb">01–04</text>
+  <text x="77.5" y="289" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">理解</text>
+  <text x="77.5" y="316" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">与计划</text>
+
+  <rect x="140" y="132" width="560" height="64" rx="12" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+  <rect x="154" y="142" width="34" height="22" rx="11" fill="#2563eb"/>
+  <text x="171" y="158" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">01</text>
+  <text x="200" y="159" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">提出问题</text>
+  <text x="200" y="183" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">多轮指代消解，形成独立问题</text>
+
+  <rect x="140" y="210" width="560" height="64" rx="12" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+  <rect x="154" y="220" width="34" height="22" rx="11" fill="#2563eb"/>
+  <text x="171" y="236" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">02</text>
+  <text x="200" y="237" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">识别目标</text>
+  <text x="200" y="261" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">意图 · 约束 · 歧义 · 成功标准</text>
+
+  <rect x="140" y="288" width="560" height="64" rx="12" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+  <rect x="154" y="298" width="34" height="22" rx="11" fill="#2563eb"/>
+  <text x="171" y="314" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">03</text>
+  <text x="200" y="315" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">拆解子问题</text>
+  <text x="200" y="339" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">5–12 个可检索、可验证的子问题</text>
+
+  <rect x="140" y="366" width="560" height="64" rx="12" fill="#ffffff" stroke="#dbeafe" stroke-width="1.5"/>
+  <rect x="154" y="376" width="34" height="22" rx="11" fill="#2563eb"/>
+  <text x="171" y="392" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">04</text>
+  <text x="200" y="393" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">制定计划</text>
+  <text x="200" y="417" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">子问题 DAG · 优先级 · 预算 · 停止条件</text>
+
+  <line x1="420" y1="430" x2="420" y2="486" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 阶段 2：检索与取证 -->
+  <rect x="35" y="478" width="85" height="334" rx="14" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5"/>
+  <text x="77.5" y="611" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12.5" font-weight="700" fill="#0f766e">05–08</text>
+  <text x="77.5" y="647" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#065f46">检索</text>
+  <text x="77.5" y="674" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#065f46">与取证</text>
+
+  <rect x="140" y="490" width="560" height="64" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="154" y="500" width="34" height="22" rx="11" fill="#0f766e"/>
+  <text x="171" y="516" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">05</text>
+  <text x="200" y="517" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">多轮检索</text>
+  <text x="200" y="541" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">多查询 · 混合召回 · 结果去重</text>
+
+  <rect x="140" y="568" width="560" height="64" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="154" y="578" width="34" height="22" rx="11" fill="#0f766e"/>
+  <text x="171" y="594" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">06</text>
+  <text x="200" y="595" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">阅读抽取</text>
+  <text x="200" y="619" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">解析 · 切片 · claim + quote · 定位</text>
+
+  <rect x="140" y="646" width="560" height="64" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="154" y="656" width="34" height="22" rx="11" fill="#0f766e"/>
+  <text x="171" y="672" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">07</text>
+  <text x="200" y="673" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">聚类去重</text>
+  <text x="200" y="697" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">按 claim 归并，标记来源独立性</text>
+
+  <rect x="140" y="724" width="560" height="64" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="154" y="734" width="34" height="22" rx="11" fill="#0f766e"/>
+  <text x="171" y="750" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">08</text>
+  <text x="200" y="751" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">交叉验证</text>
+  <text x="200" y="775" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">来源分级 · NLI · 时效 · 冲突记录</text>
+
+  <line x1="420" y1="788" x2="420" y2="844" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 阶段 3：校验与补缺 -->
+  <rect x="35" y="836" width="85" height="268" rx="14" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="77.5" y="936" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12.5" font-weight="700" fill="#d97706">09–11</text>
+  <text x="77.5" y="972" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#92400e">校验</text>
+  <text x="77.5" y="999" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#92400e">与补缺</text>
+
+  <rect x="140" y="848" width="560" height="64" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="154" y="858" width="34" height="22" rx="11" fill="#d97706"/>
+  <text x="171" y="874" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">09</text>
+  <text x="200" y="875" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">发现缺口</text>
+  <text x="200" y="899" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">覆盖率 · 证据不足 · 未决冲突</text>
+
+  <rect x="140" y="926" width="560" height="64" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="154" y="936" width="34" height="22" rx="11" fill="#d97706"/>
+  <text x="171" y="952" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">10</text>
+  <text x="200" y="953" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">追加检索</text>
+  <text x="200" y="977" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">换角度 / 来源 / 语言 / 时间范围</text>
+
+  <rect x="140" y="1004" width="560" height="64" rx="12" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="154" y="1014" width="34" height="22" rx="11" fill="#d97706"/>
+  <text x="171" y="1030" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">11</text>
+  <text x="200" y="1031" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">中间结论</text>
+  <text x="200" y="1055" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">每个子问题带置信度和版本</text>
+
+  <line x1="420" y1="1068" x2="420" y2="1136" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 阶段 4：综合与交付 -->
+  <rect x="35" y="1128" width="85" height="192" rx="14" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <text x="77.5" y="1190" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12.5" font-weight="700" fill="#7c3aed">12–13</text>
+  <text x="77.5" y="1226" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#5b21b6">综合</text>
+  <text x="77.5" y="1253" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#5b21b6">与交付</text>
+
+  <rect x="140" y="1140" width="560" height="64" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <rect x="154" y="1150" width="34" height="22" rx="11" fill="#7c3aed"/>
+  <text x="171" y="1166" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">12</text>
+  <text x="200" y="1167" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">综合推理</text>
+  <text x="200" y="1191" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">证据图 · 比较 · 归因 · 外推</text>
+
+  <rect x="140" y="1218" width="560" height="64" rx="12" fill="#ffffff" stroke="#ddd6fe" stroke-width="1.5"/>
+  <rect x="154" y="1228" width="34" height="22" rx="11" fill="#7c3aed"/>
+  <text x="171" y="1244" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">13</text>
+  <text x="200" y="1245" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="22" font-weight="700" fill="#0f172a">生成报告</text>
+  <text x="200" y="1269" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" fill="#64748b">大纲 · 引用绑定 · 一致性校验</text>
+
+  <!-- 反馈回路 -->
+  <rect x="35" y="1348" width="710" height="92" rx="14" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <text x="55" y="1381" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="#9a3412">反馈回路</text>
+  <text x="55" y="1410" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="16" fill="#7c2d12">09 发现缺口 → 10 追加检索 → 回到 05 继续检索</text>
+  <text x="55" y="1436" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="16" fill="#7c2d12">关键事实冲突 → 回到 04 重规划，调整子问题与预算</text>
+</svg>
