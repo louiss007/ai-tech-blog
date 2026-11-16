@@ -42,6 +42,10 @@ S_P = (
     "margin:0 0 18px;font-size:16px;line-height:1.85;color:#374151;"
     "text-align:justify;"
 )
+S_NOTE = (
+    "margin:22px 0;font-size:14px;line-height:1.8;color:#64748b;"
+    "text-align:center;"
+)
 S_BQ = (
     "margin:18px 0;padding:14px 18px;background:#f0f7ff;"
     "border-left:4px solid #2563eb;border-radius:0 6px 6px 0;"
@@ -154,7 +158,7 @@ def render_table(rows: list[str]) -> str:
     return "".join(out)
 
 
-def md_to_html(md: str) -> str:
+def md_to_html(md: str, img_prefix: str = "") -> str:
     lines = md.splitlines()
     out: list[str] = []
     i = 0
@@ -200,6 +204,20 @@ def md_to_html(md: str) -> str:
         # horizontal rule
         if stripped == "---":
             out.append(f'<hr style="{S_HR}">')
+            i += 1
+            continue
+
+        # image
+        m = re.match(r"^!\[([^\]]*)\]\(([^)]+)\)$", stripped)
+        if m:
+            alt = htmlmod.escape(m.group(1), quote=True)
+            src = htmlmod.escape(img_prefix + m.group(2), quote=True)
+            out.append(
+                f'<figure style="margin:24px 0;text-align:center;">'
+                f'<img src="{src}" alt="{alt}" '
+                f'style="width:100%;max-width:100%;border-radius:8px;'
+                f'display:block;margin:0 auto;"></figure>'
+            )
             i += 1
             continue
 
@@ -264,7 +282,7 @@ def md_to_html(md: str) -> str:
             if not cur:
                 break
             if (
-                cur.startswith(("#", ">", "|", "```", "<!--"))
+                cur.startswith(("#", ">", "|", "```", "<!--", "!["))
                 or cur == "---"
                 or re.match(r"^[-*]\s+", cur)
                 or re.match(r"^\d+\.\s+", cur)
@@ -273,7 +291,15 @@ def md_to_html(md: str) -> str:
             buf.append(inline(cur))
             i += 1
         if buf:
-            out.append(f'<p style="{S_P}">{"<br>".join(buf)}</p>')
+            note = (
+                re.match(r'^<em style="[^"]*">(.*)</em>$', buf[0], re.S)
+                if len(buf) == 1
+                else None
+            )
+            if note:
+                out.append(f'<p style="{S_NOTE}">{note.group(1)}</p>')
+            else:
+                out.append(f'<p style="{S_P}">{"<br>".join(buf)}</p>')
         else:
             i += 1
 
@@ -426,7 +452,11 @@ def main() -> None:
     )
     full_html = BASE / "deep-research-wechat.html"
     full_html.write_text(
-        html_document(full_title, md_to_html(full_md)), encoding="utf-8"
+        html_document(
+            full_title,
+            md_to_html(full_md, img_prefix="wechat-series/"),
+        ),
+        encoding="utf-8",
     )
     print(f"wrote {full_html.name}")
 
