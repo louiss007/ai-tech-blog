@@ -53,6 +53,16 @@
 
 文献列表在 `build_wechat_series.py` 的 `P1_REFS` / `P2_REFS` / `P3_REFS` 中维护。修改后重新运行脚本即可同步到 Markdown 和 HTML；完整版会自动去重合并成一份总列表。
 
+## 重新渲染配图
+
+修改 `images/*.svg` 后，在项目根目录运行：
+
+```bash
+python3 render_diagrams.py
+```
+
+脚本会把每张 SVG 以 2x 渲染成同名 PNG。
+
 ## 重新生成
 
 ```bash
