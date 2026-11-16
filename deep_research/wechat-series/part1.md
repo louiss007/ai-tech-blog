@@ -437,3 +437,22 @@ X 的许可证是 Apache 2.0
 ---
 
 *下一篇，我们先把它和 RAG 的边界划清，再把这七个模块串成一条完整的执行链路：13 步分别做什么、会在哪里翻车，以及一套可落地的架构与伪代码。*
+
+---
+
+## 参考文献
+
+以下文献是本文方法与观点的主要来源，也可作为延伸阅读；未在正文中逐条标注引用。为便于公众号阅读，仅保留 arXiv 编号与发表信息，未附外链。
+
+1. Yao, S., et al. ReAct: Synergizing Reasoning and Acting in Language Models. ICLR 2023. arXiv:2210.03629.
+2. Nakano, R., et al. WebGPT: Browser-assisted question-answering with human feedback. arXiv:2112.09332, 2021.
+3. Schick, T., et al. Toolformer: Language Models Can Teach Themselves to Use Tools. NeurIPS 2023. arXiv:2302.04761.
+4. Lewis, P., et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 2020. arXiv:2005.11401.
+5. Gao, Y., et al. Retrieval-Augmented Generation for Large Language Models: A Survey. arXiv:2312.10997, 2023.
+6. Asai, A., et al. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. ICLR 2024. arXiv:2310.11511.
+7. Yan, S.-Q., et al. Corrective Retrieval Augmented Generation. arXiv:2401.15884, 2024.
+8. Gao, L., et al. Precise Zero-Shot Dense Retrieval without Relevance Labels. ACL 2023. arXiv:2212.10496.
+9. Cormack, G. V., Clarke, C. L. A., & Büttcher, S. Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods. SIGIR 2009.
+10. Liu, N. F., et al. Lost in the Middle: How Language Models Use Long Contexts. TACL 2024. arXiv:2307.03172.
+11. Huang, Y., et al. Deep Research Agents: A Systematic Examination and Roadmap. arXiv:2506.18096, 2025.
+12. OpenAI. Deep Research System Card. 2025.

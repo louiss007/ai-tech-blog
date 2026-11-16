@@ -53,6 +53,10 @@ S_BQ = (
 )
 S_UL = "margin:0 0 18px;padding-left:24px;color:#374151;"
 S_LI = "margin:0 0 9px;line-height:1.8;font-size:16px;"
+S_REF_LI = (
+    "margin:0 0 10px;line-height:1.75;font-size:14px;color:#475569;"
+    "text-align:left;"
+)
 S_HR = "border:none;border-top:1px solid #e5e7eb;margin:34px 0;"
 S_STRONG = "color:#111827;font-weight:600;"
 S_EM = "color:#6b7280;font-style:normal;"
@@ -163,6 +167,7 @@ def md_to_html(md: str, img_prefix: str = "") -> str:
     out: list[str] = []
     i = 0
     n = len(lines)
+    in_refs = False
 
     while i < n:
         line = lines[i]
@@ -195,7 +200,10 @@ def md_to_html(md: str, img_prefix: str = "") -> str:
         m = re.match(r"^(#{1,4})\s+(.*)$", stripped)
         if m:
             level = len(m.group(1))
-            text = inline(m.group(2))
+            raw_text = m.group(2).strip()
+            if level <= 2:
+                in_refs = raw_text == "参考文献"
+            text = inline(raw_text)
             styles = {1: S_H1, 2: S_H2, 3: S_H3, 4: S_H3}
             out.append(f'<h{level} style="{styles[level]}">{text}</h{level}>')
             i += 1
@@ -266,9 +274,10 @@ def md_to_html(md: str, img_prefix: str = "") -> str:
         if re.match(r"^\d+\.\s+", stripped):
             items = []
             start = int(re.match(r"^(\d+)\.", stripped).group(1))
+            li_style = S_REF_LI if in_refs else S_LI
             while i < n and re.match(r"^\d+\.\s+", lines[i].strip()):
                 item = re.sub(r"^\d+\.\s+", "", lines[i].strip())
-                items.append(f'<li style="{S_LI}">{inline(item)}</li>')
+                items.append(f'<li style="{li_style}">{inline(item)}</li>')
                 i += 1
             out.append(
                 f'<ol start="{start}" style="{S_UL}">{"".join(items)}</ol>'
@@ -360,6 +369,63 @@ P2_OUTRO = """
 *下一篇是最后一篇：怎么评估研究质量、8 个典型应用场景、7 个未来趋势，以及给工程团队的 8 条落地建议。*
 """
 
+REF_INTRO = (
+    "以下文献是本文方法与观点的主要来源，也可作为延伸阅读；"
+    "未在正文中逐条标注引用。为便于公众号阅读，仅保留 arXiv 编号与发表信息，未附外链。"
+)
+
+P1_REFS = [
+    "Yao, S., et al. ReAct: Synergizing Reasoning and Acting in Language Models. ICLR 2023. arXiv:2210.03629.",
+    "Nakano, R., et al. WebGPT: Browser-assisted question-answering with human feedback. arXiv:2112.09332, 2021.",
+    "Schick, T., et al. Toolformer: Language Models Can Teach Themselves to Use Tools. NeurIPS 2023. arXiv:2302.04761.",
+    "Lewis, P., et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 2020. arXiv:2005.11401.",
+    "Gao, Y., et al. Retrieval-Augmented Generation for Large Language Models: A Survey. arXiv:2312.10997, 2023.",
+    "Asai, A., et al. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. ICLR 2024. arXiv:2310.11511.",
+    "Yan, S.-Q., et al. Corrective Retrieval Augmented Generation. arXiv:2401.15884, 2024.",
+    "Gao, L., et al. Precise Zero-Shot Dense Retrieval without Relevance Labels. ACL 2023. arXiv:2212.10496.",
+    "Cormack, G. V., Clarke, C. L. A., & Büttcher, S. Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods. SIGIR 2009.",
+    "Liu, N. F., et al. Lost in the Middle: How Language Models Use Long Contexts. TACL 2024. arXiv:2307.03172.",
+    "Huang, Y., et al. Deep Research Agents: A Systematic Examination and Roadmap. arXiv:2506.18096, 2025.",
+    "OpenAI. Deep Research System Card. 2025.",
+]
+
+P2_REFS = [
+    "Yao, S., et al. ReAct: Synergizing Reasoning and Acting in Language Models. ICLR 2023. arXiv:2210.03629.",
+    "Wang, L., et al. Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models. ACL 2023. arXiv:2305.04091.",
+    "Yao, S., et al. Tree of Thoughts: Deliberate Problem Solving with Large Language Models. NeurIPS 2023. arXiv:2305.10601.",
+    "Shinn, N., et al. Reflexion: Language Agents with Verbal Reinforcement Learning. NeurIPS 2023. arXiv:2303.11366.",
+    "Madaan, A., et al. Self-Refine: Iterative Refinement with Self-Feedback. NeurIPS 2023. arXiv:2303.17651.",
+    "Dhuliawala, S., et al. Chain-of-Verification Reduces Hallucination in Large Language Models. ACL Findings 2024. arXiv:2309.11495.",
+    "Es, S., et al. RAGAS: Automated Evaluation of Retrieval Augmented Generation. EACL 2024 Demo. arXiv:2309.15217.",
+    "Zheng, L., et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023. arXiv:2306.05685.",
+    "Du, M., et al. DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents. arXiv:2506.11763, 2025.",
+    "Wei, J., et al. BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents. arXiv:2504.12516, 2025.",
+    "Mialon, G., et al. GAIA: A Benchmark for General AI Assistants. ICLR 2024. arXiv:2311.12983.",
+    "Zheng, Y., et al. DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments. EMNLP 2025. arXiv:2504.03160.",
+]
+
+P3_REFS = [
+    "Mialon, G., et al. GAIA: A Benchmark for General AI Assistants. ICLR 2024. arXiv:2311.12983.",
+    "Wei, J., et al. BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents. arXiv:2504.12516, 2025.",
+    "Du, M., et al. DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents. arXiv:2506.11763, 2025.",
+    "Phan, L., et al. Humanity's Last Exam. arXiv:2501.14249, 2025.",
+    "Min, S., et al. FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation. EMNLP 2023. arXiv:2305.14251.",
+    "Bohnet, B., et al. Attributed Question Answering: Evaluation and Modeling for Attributed Large Language Models. arXiv:2212.08037, 2022.",
+    "Es, S., et al. RAGAS: Automated Evaluation of Retrieval Augmented Generation. EACL 2024 Demo. arXiv:2309.15217.",
+    "Zheng, L., et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023. arXiv:2306.05685.",
+    "Huang, Y., et al. Deep Research Agents: A Systematic Examination and Roadmap. arXiv:2506.18096, 2025.",
+    "Jin, B., et al. Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning. COLM 2025. arXiv:2503.09516.",
+    "Li, X., et al. WebThinker: Empowering Large Reasoning Models with Deep Research Capability. NeurIPS 2025. arXiv:2504.21776.",
+    "Zheng, Y., et al. DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments. EMNLP 2025. arXiv:2504.03160.",
+    "OpenAI. Deep Research System Card. 2025.",
+]
+
+
+def refs_section(refs: list[str]) -> str:
+    lines = ["---", "", "## 参考文献", "", REF_INTRO, ""]
+    lines.extend(f"{i}. {ref}" for i, ref in enumerate(refs, 1))
+    return "\n".join(lines)
+
 
 def build_markdown() -> dict[str, str]:
     raw = SRC.read_text(encoding="utf-8")
@@ -422,6 +488,10 @@ def build_markdown() -> dict[str, str]:
 
 {p3_body}"""
 
+    p1 = p1.rstrip() + "\n\n" + refs_section(P1_REFS)
+    p2 = p2.rstrip() + "\n\n" + refs_section(P2_REFS)
+    p3 = p3.rstrip() + "\n\n" + refs_section(P3_REFS)
+
     return {"part1": p1, "part2": p2, "part3": p3}
 
 
@@ -450,11 +520,13 @@ def main() -> None:
         for line in full_md.splitlines()
         if line.startswith("# ")
     )
+    all_refs = list(dict.fromkeys(P1_REFS + P2_REFS + P3_REFS))
+    full_with_refs = full_md.rstrip() + "\n\n" + refs_section(all_refs)
     full_html = BASE / "deep-research-wechat.html"
     full_html.write_text(
         html_document(
             full_title,
-            md_to_html(full_md, img_prefix="wechat-series/"),
+            md_to_html(full_with_refs, img_prefix="wechat-series/"),
         ),
         encoding="utf-8",
     )

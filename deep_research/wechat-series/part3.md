@@ -119,3 +119,23 @@ Deep Research 的核心价值，不是写得更长，而是：
 *如果这篇文章对你有帮助，欢迎点个“在看”，或者留言聊聊你们正在落地的研究型 Agent 场景。*
 
 *这个系列到这里就结束了。如果大家感兴趣，后面可以单独拆解：如何为 Deep Research 构建一套可用的评估集。*
+
+---
+
+## 参考文献
+
+以下文献是本文方法与观点的主要来源，也可作为延伸阅读；未在正文中逐条标注引用。为便于公众号阅读，仅保留 arXiv 编号与发表信息，未附外链。
+
+1. Mialon, G., et al. GAIA: A Benchmark for General AI Assistants. ICLR 2024. arXiv:2311.12983.
+2. Wei, J., et al. BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents. arXiv:2504.12516, 2025.
+3. Du, M., et al. DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents. arXiv:2506.11763, 2025.
+4. Phan, L., et al. Humanity's Last Exam. arXiv:2501.14249, 2025.
+5. Min, S., et al. FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation. EMNLP 2023. arXiv:2305.14251.
+6. Bohnet, B., et al. Attributed Question Answering: Evaluation and Modeling for Attributed Large Language Models. arXiv:2212.08037, 2022.
+7. Es, S., et al. RAGAS: Automated Evaluation of Retrieval Augmented Generation. EACL 2024 Demo. arXiv:2309.15217.
+8. Zheng, L., et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023. arXiv:2306.05685.
+9. Huang, Y., et al. Deep Research Agents: A Systematic Examination and Roadmap. arXiv:2506.18096, 2025.
+10. Jin, B., et al. Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning. COLM 2025. arXiv:2503.09516.
+11. Li, X., et al. WebThinker: Empowering Large Reasoning Models with Deep Research Capability. NeurIPS 2025. arXiv:2504.21776.
+12. Zheng, Y., et al. DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments. EMNLP 2025. arXiv:2504.03160.
+13. OpenAI. Deep Research System Card. 2025.

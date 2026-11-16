@@ -41,13 +41,19 @@
 - 上篇另有 2 处配图建议、中篇有 1 处，注释在转换后不可见，需要手动配图；
 - 文末 CTA 和连载预告与发布顺序一致。
 
+## 参考文献
+
+三篇文末都加了“参考文献”，上篇 12 条、中篇 12 条、下篇 13 条，覆盖 RAG、Agent、验证、评估和 Deep Research 基准。为适配公众号，文献只保留作者、标题、发表信息与 arXiv 编号，没有外链。
+
+文献列表在 `build_wechat_series.py` 的 `P1_REFS` / `P2_REFS` / `P3_REFS` 中维护。修改后重新运行脚本即可同步到 Markdown 和 HTML；完整版会自动去重合并成一份总列表。
+
 ## 重新生成
 
 ```bash
 python3 build_wechat_series.py
 ```
 
-脚本会重新拆分 `deep-research-wechat.md`，并生成三个 HTML 和完整版 HTML。
+脚本会重新拆分 `deep-research-wechat.md`，并生成三个 HTML 和完整版 HTML。注意：如果要长期修改正文，建议改 `deep-research-wechat.md` 或脚本里的模板，不要直接改生成出来的 `partX.md`，否则下次运行会被覆盖。
 
 ## 说明
 

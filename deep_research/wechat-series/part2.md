@@ -253,3 +253,22 @@ def verify_evidence(items, state):
 ---
 
 *下一篇是最后一篇：怎么评估研究质量、8 个典型应用场景、7 个未来趋势，以及给工程团队的 8 条落地建议。*
+
+---
+
+## 参考文献
+
+以下文献是本文方法与观点的主要来源，也可作为延伸阅读；未在正文中逐条标注引用。为便于公众号阅读，仅保留 arXiv 编号与发表信息，未附外链。
+
+1. Yao, S., et al. ReAct: Synergizing Reasoning and Acting in Language Models. ICLR 2023. arXiv:2210.03629.
+2. Wang, L., et al. Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models. ACL 2023. arXiv:2305.04091.
+3. Yao, S., et al. Tree of Thoughts: Deliberate Problem Solving with Large Language Models. NeurIPS 2023. arXiv:2305.10601.
+4. Shinn, N., et al. Reflexion: Language Agents with Verbal Reinforcement Learning. NeurIPS 2023. arXiv:2303.11366.
+5. Madaan, A., et al. Self-Refine: Iterative Refinement with Self-Feedback. NeurIPS 2023. arXiv:2303.17651.
+6. Dhuliawala, S., et al. Chain-of-Verification Reduces Hallucination in Large Language Models. ACL Findings 2024. arXiv:2309.11495.
+7. Es, S., et al. RAGAS: Automated Evaluation of Retrieval Augmented Generation. EACL 2024 Demo. arXiv:2309.15217.
+8. Zheng, L., et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023. arXiv:2306.05685.
+9. Du, M., et al. DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents. arXiv:2506.11763, 2025.
+10. Wei, J., et al. BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents. arXiv:2504.12516, 2025.
+11. Mialon, G., et al. GAIA: A Benchmark for General AI Assistants. ICLR 2024. arXiv:2311.12983.
+12. Zheng, Y., et al. DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments. EMNLP 2025. arXiv:2504.03160.
