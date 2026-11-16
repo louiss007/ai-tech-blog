@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="1060" viewBox="0 0 780 1060">
+  <rect width="780" height="1060" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="390" y="46" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="30" font-weight="700" fill="#0f172a">Deep Research 评估流程</text>
+  <text x="390" y="80" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="18" fill="#64748b">别只看答案对不对：结果、过程、成本都要评</text>
+
+  <!-- 评估对象 -->
+  <rect x="90" y="110" width="600" height="56" rx="14" fill="#0f172a"/>
+  <text x="390" y="145" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" font-weight="600" fill="#ffffff">评估对象：报告 + 引用 + 证据链 + Trace + 成本</text>
+  <line x1="390" y1="166" x2="390" y2="218" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 01 评什么 -->
+  <text x="60" y="212" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#0f172a">01  评什么：三层指标</text>
+
+  <!-- 结果质量 -->
+  <rect x="60" y="226" width="660" height="100" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="60" y="226" width="6" height="100" fill="#2563eb"/>
+  <text x="84" y="266" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="21" font-weight="700" fill="#1e3a8a">结果质量</text>
+  <text x="84" y="290" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">报告本身</text>
+
+  <rect x="240" y="242" width="140" height="30" rx="15" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="310" y="262" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#1e40af">信息覆盖率</text>
+  <rect x="390" y="242" width="140" height="30" rx="15" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="460" y="262" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#1e40af">事实准确率</text>
+  <rect x="540" y="242" width="140" height="30" rx="15" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="610" y="262" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#1e40af">引用准确率</text>
+
+  <rect x="240" y="284" width="140" height="30" rx="15" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="310" y="304" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#1e40af">结论可解释性</text>
+  <rect x="390" y="284" width="140" height="30" rx="15" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="460" y="304" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#1e40af">多来源一致性</text>
+  <rect x="540" y="284" width="140" height="30" rx="15" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+  <text x="610" y="304" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#1e40af">报告结构质量</text>
+
+  <!-- 过程质量 -->
+  <rect x="60" y="340" width="660" height="100" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="60" y="340" width="6" height="100" fill="#0f766e"/>
+  <text x="84" y="380" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="21" font-weight="700" fill="#065f46">过程质量</text>
+  <text x="84" y="404" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">怎么得到结论</text>
+
+  <rect x="240" y="356" width="140" height="30" rx="15" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="310" y="376" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#065f46">计划质量</text>
+  <rect x="390" y="356" width="140" height="30" rx="15" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="460" y="376" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#065f46">检索多样性</text>
+  <rect x="540" y="356" width="140" height="30" rx="15" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="610" y="376" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#065f46">验证覆盖率</text>
+
+  <rect x="240" y="398" width="140" height="30" rx="15" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="310" y="418" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#065f46">引用可追溯</text>
+  <rect x="390" y="398" width="140" height="30" rx="15" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="460" y="418" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#065f46">工具调用效率</text>
+  <rect x="540" y="398" width="140" height="30" rx="15" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.2"/>
+  <text x="610" y="418" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#065f46">证据独立性</text>
+
+  <!-- 成本与体验 -->
+  <rect x="60" y="454" width="660" height="100" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="60" y="454" width="6" height="100" fill="#d97706"/>
+  <text x="84" y="494" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="21" font-weight="700" fill="#92400e">成本与体验</text>
+  <text x="84" y="518" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#64748b">是否可运营</text>
+
+  <rect x="240" y="489" width="140" height="30" rx="15" fill="#ffffff" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="310" y="509" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#92400e">时长 P50/P95</text>
+  <rect x="390" y="489" width="140" height="30" rx="15" fill="#ffffff" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="460" y="509" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#92400e">Token 成本</text>
+  <rect x="540" y="489" width="140" height="30" rx="15" fill="#ffffff" stroke="#fde68a" stroke-width="1.2"/>
+  <text x="610" y="509" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#92400e">用户满意度</text>
+
+  <line x1="390" y1="554" x2="390" y2="598" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 02 怎么评 -->
+  <text x="60" y="620" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#0f172a">02  怎么评：三条路径</text>
+
+  <!-- 离线自动 -->
+  <rect x="60" y="634" width="660" height="80" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <rect x="78" y="656" width="36" height="24" rx="12" fill="#2563eb"/>
+  <text x="96" y="672" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">01</text>
+  <text x="130" y="666" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#0f172a">离线自动评估</text>
+  <text x="130" y="692" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="17" fill="#64748b">LLM-as-judge + 规则 · 每次提交都跑，快速回归</text>
+
+  <!-- 人工抽检 -->
+  <rect x="60" y="728" width="660" height="80" rx="12" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+  <rect x="78" y="750" width="36" height="24" rx="12" fill="#0f766e"/>
+  <text x="96" y="766" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">02</text>
+  <text x="130" y="760" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#0f172a">人工抽检</text>
+  <text x="130" y="786" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="17" fill="#64748b">领域专家按 rubric 打分 · 每月抽样，校准自动评估</text>
+
+  <!-- 线上反馈 -->
+  <rect x="60" y="822" width="660" height="80" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="78" y="844" width="36" height="24" rx="12" fill="#d97706"/>
+  <text x="96" y="860" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" font-weight="700" fill="#ffffff">03</text>
+  <text x="130" y="854" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#0f172a">线上反馈</text>
+  <text x="130" y="880" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="17" fill="#64748b">点赞、采纳率、编辑距离 · 二次追问率，长期跟踪</text>
+
+  <line x1="390" y1="902" x2="390" y2="934" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- 输出 -->
+  <rect x="60" y="936" width="660" height="86" rx="14" fill="#0f766e"/>
+  <text x="390" y="972" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="19" font-weight="700" fill="#ffffff">汇总评分 → 版本对比 → 失败归因 → 迭代改进</text>
+  <text x="390" y="998" text-anchor="middle" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#d1fae5">评估结果进入发布门槛与回归测试</text>
+</svg>

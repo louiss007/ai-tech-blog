@@ -14,6 +14,8 @@
 | `images/part1-architecture.svg` | 上篇架构图矢量源文件，可改文字、颜色 | — |
 | `images/part2-workflow.png` | 中篇“13 步工作流”阶段图，1560×2960 | — |
 | `images/part2-workflow.svg` | 中篇工作流图矢量源文件 | — |
+| `images/part3-evaluation.png` | 下篇“评估流程”图，1560×2120 | — |
+| `images/part3-evaluation.svg` | 下篇评估图矢量源文件 | — |
 
 ## 建议发布顺序
 
@@ -41,6 +43,7 @@
 - 引用块、加粗、二级标题样式保留；
 - 上篇已内置总架构图：如果粘贴 HTML 后图片没有自动带入，请在“03 | 七个核心模块”开头手动上传 `images/part1-architecture.png`；
 - 中篇已内置 13 步工作流图：若未自动带入，请在“05 | 完整工作流：13 步”开头手动上传 `images/part2-workflow.png`；
+- 下篇已内置评估流程图：若未自动带入，请在“08 | 怎么评估”开头手动上传 `images/part3-evaluation.png`；
 - 上篇另有 2 处配图建议、中篇另有 1 处，注释在转换后不可见，需要手动配图；
 - 文末 CTA 和连载预告与发布顺序一致。
 
