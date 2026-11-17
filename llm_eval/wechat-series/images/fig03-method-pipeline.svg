@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="600" viewBox="0 0 750 600">
+  <rect width="750" height="600" fill="#ffffff"/>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="48" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">六种方法，组合使用</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">从便宜、快，到真实、贵</text>
+
+    <rect x="60" y="115" width="630" height="62" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="60" y="115" width="8" height="62" rx="4" fill="#2563eb"/>
+    <text x="85" y="152" font-size="14" fill="#64748b">01</text>
+    <text x="130" y="153" font-size="20" font-weight="700" fill="#1e3a8a">Benchmark</text>
+    <text x="340" y="152" font-size="16" fill="#334155">能力初筛</text>
+    <rect x="550" y="130" width="120" height="32" rx="16" fill="#dbeafe"/>
+    <text x="610" y="151" text-anchor="middle" font-size="14" fill="#1d4ed8">便宜、快</text>
+
+    <rect x="60" y="187" width="630" height="62" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="60" y="187" width="8" height="62" rx="4" fill="#2563eb"/>
+    <text x="85" y="224" font-size="14" fill="#64748b">02</text>
+    <text x="130" y="225" font-size="20" font-weight="700" fill="#1e3a8a">Golden Set</text>
+    <text x="340" y="224" font-size="16" fill="#334155">任务验收</text>
+    <rect x="550" y="202" width="120" height="32" rx="16" fill="#dbeafe"/>
+    <text x="610" y="223" text-anchor="middle" font-size="14" fill="#1d4ed8">贴近业务</text>
+
+    <rect x="60" y="259" width="630" height="62" rx="10" fill="#f0fdfa" stroke="#99f6e4"/>
+    <rect x="60" y="259" width="8" height="62" rx="4" fill="#0f766e"/>
+    <text x="85" y="296" font-size="14" fill="#64748b">03</text>
+    <text x="130" y="297" font-size="20" font-weight="700" fill="#115e59">自动指标</text>
+    <text x="340" y="296" font-size="16" fill="#334155">扩大覆盖</text>
+    <rect x="550" y="274" width="120" height="32" rx="16" fill="#ccfbf1"/>
+    <text x="610" y="295" text-anchor="middle" font-size="14" fill="#0f766e">可进 CI</text>
+
+    <rect x="60" y="331" width="630" height="62" rx="10" fill="#fffbeb" stroke="#fcd34d"/>
+    <rect x="60" y="331" width="8" height="62" rx="4" fill="#d97706"/>
+    <text x="85" y="368" font-size="14" fill="#64748b">04</text>
+    <text x="130" y="369" font-size="20" font-weight="700" fill="#92400e">LLM Judge</text>
+    <text x="340" y="368" font-size="16" fill="#334155">语义评分</text>
+    <rect x="550" y="346" width="120" height="32" rx="16" fill="#fef3c7"/>
+    <text x="610" y="367" text-anchor="middle" font-size="14" fill="#b45309">有偏差</text>
+
+    <rect x="60" y="403" width="630" height="62" rx="10" fill="#fffbeb" stroke="#fcd34d"/>
+    <rect x="60" y="403" width="8" height="62" rx="4" fill="#d97706"/>
+    <text x="85" y="440" font-size="14" fill="#64748b">05</text>
+    <text x="130" y="441" font-size="20" font-weight="700" fill="#92400e">人工评估</text>
+    <text x="340" y="440" font-size="16" fill="#334155">校准与兜底</text>
+    <rect x="550" y="418" width="120" height="32" rx="16" fill="#fef3c7"/>
+    <text x="610" y="439" text-anchor="middle" font-size="14" fill="#b45309">贵、主观</text>
+
+    <rect x="60" y="475" width="630" height="62" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+    <rect x="60" y="475" width="8" height="62" rx="4" fill="#0f172a"/>
+    <text x="85" y="512" font-size="14" fill="#64748b">06</text>
+    <text x="130" y="513" font-size="20" font-weight="700" fill="#0f172a">线上 A/B</text>
+    <text x="340" y="512" font-size="16" fill="#334155">真实价值</text>
+    <rect x="550" y="490" width="120" height="32" rx="16" fill="#e2e8f0"/>
+    <text x="610" y="511" text-anchor="middle" font-size="14" fill="#334155">慢、噪声</text>
+
+    <text x="375" y="575" text-anchor="middle" font-size="15" fill="#64748b">越往下越贵、越慢，也越接近真实价值。</text>
+  </g>
+</svg>

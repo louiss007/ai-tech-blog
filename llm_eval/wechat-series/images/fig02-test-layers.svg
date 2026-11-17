@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="520" viewBox="0 0 750 520">
+  <rect width="750" height="520" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="48" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">评估要分三层</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">确定性测试只是外围，语义和统计才是核心</text>
+
+    <rect x="40" y="120" width="200" height="300" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <rect x="40" y="120" width="200" height="8" rx="4" fill="#2563eb"/>
+    <text x="65" y="153" font-size="14" fill="#64748b">01</text>
+    <text x="65" y="185" font-size="20" font-weight="700" fill="#1e3a8a">确定性测试</text>
+    <text x="65" y="225" font-size="16" fill="#334155">Schema 校验</text>
+    <text x="65" y="257" font-size="16" fill="#334155">状态码 / 超时</text>
+    <text x="65" y="289" font-size="16" fill="#334155">权限 / 幂等</text>
+    <text x="65" y="321" font-size="16" fill="#334155">工具参数合法性</text>
+    <text x="65" y="380" font-size="14" fill="#64748b">像后端一样严格</text>
+
+    <line x1="246" y1="270" x2="270" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="275" y="120" width="200" height="300" rx="12" fill="#f0fdfa" stroke="#99f6e4"/>
+    <rect x="275" y="120" width="200" height="8" rx="4" fill="#0f766e"/>
+    <text x="300" y="153" font-size="14" fill="#64748b">02</text>
+    <text x="300" y="185" font-size="20" font-weight="700" fill="#115e59">语义评估</text>
+    <text x="300" y="225" font-size="16" fill="#334155">正确性</text>
+    <text x="300" y="257" font-size="16" fill="#334155">完整性</text>
+    <text x="300" y="289" font-size="16" fill="#334155">忠实性</text>
+    <text x="300" y="321" font-size="16" fill="#334155">相关性</text>
+    <text x="300" y="380" font-size="14" fill="#64748b">Golden Set + Judge</text>
+
+    <line x1="481" y1="270" x2="505" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="510" y="120" width="200" height="300" rx="12" fill="#fffbeb" stroke="#fcd34d"/>
+    <rect x="510" y="120" width="200" height="8" rx="4" fill="#d97706"/>
+    <text x="535" y="153" font-size="14" fill="#64748b">03</text>
+    <text x="535" y="185" font-size="20" font-weight="700" fill="#92400e">统计评估</text>
+    <text x="535" y="225" font-size="16" fill="#334155">通过率</text>
+    <text x="535" y="257" font-size="16" fill="#334155">置信区间</text>
+    <text x="535" y="289" font-size="16" fill="#334155">稳定性</text>
+    <text x="535" y="321" font-size="16" fill="#334155">分切片对比</text>
+    <text x="535" y="380" font-size="14" fill="#64748b">看分布，不看单次</text>
+
+    <text x="375" y="470" text-anchor="middle" font-size="15" fill="#64748b">目标不是每次输出一样，而是在分布上稳定达标。</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="520" viewBox="0 0 750 520">
+  <rect width="750" height="520" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="48" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">正确性不是一种正确</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">同一个答案，四个参照物，四种结论</text>
+
+    <rect x="50" y="120" width="210" height="80" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="155" y="157" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">参考答案</text>
+    <text x="155" y="181" text-anchor="middle" font-size="13" fill="#1d4ed8">Answer Correctness</text>
+
+    <rect x="490" y="120" width="210" height="80" rx="10" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="595" y="157" text-anchor="middle" font-size="18" font-weight="700" fill="#115e59">客观世界</text>
+    <text x="595" y="181" text-anchor="middle" font-size="13" fill="#0f766e">Factuality</text>
+
+    <rect x="50" y="350" width="210" height="80" rx="10" fill="#fffbeb" stroke="#fcd34d"/>
+    <text x="155" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#92400e">给定上下文</text>
+    <text x="155" y="411" text-anchor="middle" font-size="13" fill="#b45309">Faithfulness</text>
+
+    <rect x="490" y="350" width="210" height="80" rx="10" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="595" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#5b21b6">引用来源</text>
+    <text x="595" y="411" text-anchor="middle" font-size="13" fill="#6d28d9">Citation Accuracy</text>
+
+    <rect x="285" y="230" width="180" height="80" rx="16" fill="#0f172a"/>
+    <text x="375" y="266" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">模型回答</text>
+    <text x="375" y="291" text-anchor="middle" font-size="13" fill="#cbd5e1">同一段输出</text>
+
+    <line x1="310" y1="232" x2="258" y2="203" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="440" y1="232" x2="492" y2="203" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="310" y1="308" x2="258" y2="347" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="440" y1="308" x2="492" y2="347" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <text x="375" y="480" text-anchor="middle" font-size="15" fill="#64748b">标准答案对，不代表事实对；事实对，也不代表有依据。</text>
+  </g>
+</svg>
