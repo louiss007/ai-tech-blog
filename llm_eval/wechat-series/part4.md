@@ -395,3 +395,21 @@ Judge 可以扩覆盖，但必须用人工测量它的准确率。
 > 这次改动，是变好了，还是变坏了？
 
 *如果这个系列对你有帮助，欢迎转发给正在做 LLM 落地的同事。*
+
+---
+
+## 参考文献
+
+以下文献是本文方法与观点的主要来源，也可作为延伸阅读；未在正文中逐条标注引用。为便于公众号阅读，仅保留作者、标题、发表信息与 arXiv 编号，未附外链。
+
+1. Liang, P., Bommasani, R., Lee, T., et al. Holistic Evaluation of Language Models. TMLR 2023. arXiv:2211.09110.
+2. Zheng, L., Chiang, W.-L., Sheng, Y., et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks Track. arXiv:2306.05685.
+3. Es, S., James, J., Espinosa-Anke, L., & Schockaert, S. RAGAS: Automated Evaluation of Retrieval Augmented Generation. EACL 2024 Demo. arXiv:2309.15217.
+4. Mitchell, M., Wu, S., Zaldivar, A., et al. Model Cards for Model Reporting. FAT* 2019. arXiv:1810.03993.
+5. Gebru, T., Morgenstern, J., Vecchione, B., et al. Datasheets for Datasets. Communications of the ACM, 64(12):86–92, 2021. arXiv:1803.09010.
+6. Breck, E., Cai, S., Nielsen, E., Salib, M., & Sculley, D. The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction. IEEE BigData 2017.
+7. Sculley, D., Holt, G., Golovin, D., et al. Hidden Technical Debt in Machine Learning Systems. NeurIPS 2015.
+8. National Institute of Standards and Technology. Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1, 2023.
+9. ISO/IEC 42001:2023. Information technology — Artificial intelligence — Management system. ISO/IEC, 2023.
+10. Srivastava, A., Rastogi, A., Rao, A., et al. Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models. TMLR 2022. arXiv:2206.04615.
+11. Jain, N., Han, K., Gu, A., et al. LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code. arXiv:2403.07974, 2024.

@@ -313,3 +313,21 @@ RAG 场景如果只能选一个主指标，优先 Faithfulness。
 它们不能只看端到端结果，必须拆开评、看 Trace、做归因。
 
 *下一篇：RAG 与 Agent，必须拆开评。*
+
+---
+
+## 参考文献
+
+以下文献是本文方法与观点的主要来源，也可作为延伸阅读；未在正文中逐条标注引用。为便于公众号阅读，仅保留作者、标题、发表信息与 arXiv 编号，未附外链。
+
+1. Papineni, K., Roukos, S., Ward, T., & Zhu, W.-J. BLEU: a Method for Automatic Evaluation of Machine Translation. ACL 2002.
+2. Lin, C.-Y. ROUGE: A Package for Automatic Evaluation of Summaries. ACL Workshop on Text Summarization Branches Out, 2004.
+3. Zhang, T., Kishore, V., Wu, F., et al. BERTScore: Evaluating Text Generation with BERT. ICLR 2020. arXiv:1904.09675.
+4. Rei, R., Stewart, C., Farinha, A. C., & Lavie, A. COMET: A Neural Framework for MT Evaluation. EMNLP 2020. arXiv:2009.09025.
+5. Zheng, L., Chiang, W.-L., Sheng, Y., et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks Track. arXiv:2306.05685.
+6. Wang, P., Li, L., Chen, L., et al. Large Language Models are not Fair Evaluators. ACL 2024. arXiv:2305.17926.
+7. Liu, Y., Iter, D., Xu, Y., et al. G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment. EMNLP 2023. arXiv:2303.16634.
+8. Kim, S., Shin, J., Cho, Y., et al. Prometheus: Inducing Fine-grained Evaluation Capability in Language Models. ICLR 2024. arXiv:2310.08491.
+9. Chiang, W.-L., Zheng, L., Sheng, Y., et al. Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference. ICML 2024. arXiv:2403.04132.
+10. Liang, P., Bommasani, R., Lee, T., et al. Holistic Evaluation of Language Models. TMLR 2023. arXiv:2211.09110.
+11. Cohen, J. A Coefficient of Agreement for Nominal Scales. Educational and Psychological Measurement, 20(1):37–46, 1960.

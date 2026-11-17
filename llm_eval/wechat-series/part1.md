@@ -88,9 +88,9 @@
 2. **语义评估**：正确性、完整性、忠实性、相关性。
 3. **统计性评估**：看样本集上的通过率和置信区间。
 
-![评估的三层测试](images/fig02-test-layers.png)
+![评估的三层测试](images/fig01-test-layers.png)
 
-*图 2：确定性测试、语义评估、统计评估，三层各司其职。*
+*图 1：确定性测试、语义评估、统计评估，三层各司其职。*
 
 换句话说，目标不是“证明每次输出都一样”，而是“证明在给定分布下，质量稳定高于一条可接受的基线”。
 
@@ -131,9 +131,9 @@ Agent 也一样：任务失败，可能是规划错、工具选错、参数错�
 | 系统层 | 整条链路的效果 | 端到端评估集 |
 | 业务层 | 真实用户与结果 | 线上实验、工单 |
 
-![评估的四层对象](images/fig01-eval-layers.png)
+![评估的四层对象](images/fig02-eval-layers.png)
 
-*图 1：评估分四层，越往下越接近真实价值。*
+*图 2：评估分四层，越往下越接近真实价值。*
 
 模型层看能力覆盖，任务层看任务效果，系统层看 Prompt、RAG、Agent 和工具链，业务层看用户是否真的受益。
 
@@ -225,3 +225,22 @@ Judge 可以扩大覆盖，但不能替代人工校准，更不能直接作为�
 下一篇讲方法：Benchmark、Golden Set、人工评估、自动指标、LLM Judge 和线上 A/B，分别适合什么场景，又各自有什么坑。
 
 *下一篇：六种评估方法，别只盯着 Benchmark。*
+
+---
+
+## 参考文献
+
+以下文献是本文方法与观点的主要来源，也可作为延伸阅读；未在正文中逐条标注引用。为便于公众号阅读，仅保留作者、标题、发表信息与 arXiv 编号，未附外链。
+
+1. Hendrycks, D., Burns, C., Basart, S., et al. Measuring Massive Multitask Language Understanding. ICLR 2021. arXiv:2009.03300.
+2. Cobbe, K., Kosaraju, V., Bavarian, M., et al. Training Verifiers to Solve Math Word Problems. arXiv:2110.14168, 2021.
+3. Chen, M., Tworek, J., Jun, H., et al. Evaluating Large Language Models Trained on Code. arXiv:2107.03374, 2021.
+4. Lin, S., Hilton, J., & Evans, O. TruthfulQA: Measuring How Models Mimic Human Falsehoods. ACL 2022. arXiv:2109.07958.
+5. Zellers, R., Holtzman, A., Bisk, Y., et al. HellaSwag: Can a Machine Really Finish Your Sentence? ACL 2019. arXiv:1905.07830.
+6. Huang, Y., Bai, Y., Zhu, Z., et al. C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models. NeurIPS 2023. arXiv:2305.08322.
+7. Li, H., Zhang, Y., Koto, F., et al. CMMLU: Measuring Massive Multitask Language Understanding in Chinese. arXiv:2306.09212, 2023.
+8. Liang, P., Bommasani, R., Lee, T., et al. Holistic Evaluation of Language Models. TMLR 2023. arXiv:2211.09110.
+9. Liu, N. F., Lin, K., Hewitt, J., et al. Lost in the Middle: How Language Models Use Long Contexts. TACL 2024. arXiv:2307.03172.
+10. Guo, Z., Jin, R., Liu, C., et al. Evaluating Large Language Models: A Comprehensive Survey. arXiv:2310.19736, 2023.
+11. Deng, C., Zhao, Y., Tang, X., et al. Investigating Data Contamination in Modern Benchmarks for Large Language Models. NAACL 2024. arXiv:2311.09783.
+12. Zheng, L., Chiang, W.-L., Sheng, Y., et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks Track. arXiv:2306.05685.

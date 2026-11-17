@@ -8,10 +8,10 @@
 
 | 文件 | 内容 | 正文约 |
 |---|---|---|
-| `part1.md` / `part1.html` | 上篇：为什么评估、评什么、难在哪 | 2400 字 |
-| `part2.md` / `part2.html` | 中篇：六种方法与七类指标 | 2700 字 |
-| `part3.md` / `part3.html` | 下篇：RAG、Agent 与企业评估集 | 2600 字 |
-| `part4.md` / `part4.html` | 终篇：平台、伪代码、Judge、报告与门禁 | 2300 字 |
+| `part1.md` / `part1.html` | 上篇：为什么评估、评什么、难在哪 | 2400 字，12 条文献 |
+| `part2.md` / `part2.html` | 中篇：六种方法与七类指标 | 2700 字，11 条文献 |
+| `part3.md` / `part3.html` | 下篇：RAG、Agent 与企业评估集 | 2600 字，13 条文献 |
+| `part4.md` / `part4.html` | 终篇：平台、伪代码、Judge、报告与门禁 | 2300 字，11 条文献 |
 | `images/fig01–08.svg/png` | 8 张配图的矢量源文件与 2x PNG | — |
 | `build_wechat.py` | Markdown → 内联样式 HTML | — |
 | `render_diagrams.py` | SVG → 2x PNG（Playwright） | — |
@@ -35,8 +35,8 @@
 
 | 图 | 文件 | 放置位置 | 内容 |
 |---|---|---|---|
-| 图 1 | `images/fig01-eval-layers.png` | 上篇 §04 | 评估的四层对象 |
-| 图 2 | `images/fig02-test-layers.png` | 上篇 §02 | 确定性、语义、统计三层测试 |
+| 图 1 | `images/fig01-test-layers.png` | 上篇 §02 | 确定性、语义、统计三层测试 |
+| 图 2 | `images/fig02-eval-layers.png` | 上篇 §04 | 评估的四层对象 |
 | 图 3 | `images/fig03-method-pipeline.png` | 中篇 §01 | 六种方法的组合顺序 |
 | 图 4 | `images/fig04-correctness-reference.png` | 中篇 §08 | 正确性的四个参照物 |
 | 图 5 | `images/fig05-rag-pipeline.png` | 下篇 §01 | RAG 检索与生成两段 |
@@ -45,6 +45,16 @@
 | 图 8 | `images/fig08-gate-decision.png` | 终篇 §03 | 上线门禁的三层判断 |
 
 PNG 是 1500px 宽的 2x 渲染产物，手机上显示约 390px，关键文字约 9–12px。
+
+## 参考文献
+
+四篇文末共 47 条文献（12 / 11 / 13 / 11）。为适配公众号：
+
+- 只保留作者、标题、会议或 arXiv 编号；
+- 不写外链；
+- 文献作为方法与观点来源和延伸阅读，正文没有逐条标注引用。
+
+新增或修改文献时，先用 arXiv、ACL Anthology 或 DBLP 核对作者、标题、会议和编号，不要凭记忆补引用。
 
 ## 如何粘贴到公众号
 
@@ -88,6 +98,7 @@ python3 render_diagrams.py
 - 表格不超过 3 列，手机宽度下没有横向溢出；
 - 代码块没有横向溢出，续行不顶格；
 - 8 张配图都能正常加载，图注在图片下方；
+- 四篇文末都有参考文献，数量为 12 / 11 / 13 / 11；
 - 标题、引用块、加粗和内联代码样式保留；
 - 文内没有外链；
 - 四篇的承接语与发布顺序一致；

@@ -309,3 +309,23 @@ RAG 和 Agent 的评估，核心都是四个字：**拆开、归因。**
 下一篇讲工程化：平台怎么搭、伪代码怎么写、Judge 模板怎么设计、报告怎么写、门禁怎么接。
 
 *下一篇：把评估接进研发流程。*
+
+---
+
+## 参考文献
+
+以下文献是本文方法与观点的主要来源，也可作为延伸阅读；未在正文中逐条标注引用。为便于公众号阅读，仅保留作者、标题、发表信息与 arXiv 编号，未附外链。
+
+1. Lewis, P., Perez, E., Piktus, A., et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 2020. arXiv:2005.11401.
+2. Es, S., James, J., Espinosa-Anke, L., & Schockaert, S. RAGAS: Automated Evaluation of Retrieval Augmented Generation. EACL 2024 Demo. arXiv:2309.15217.
+3. Saad-Falcon, J., Khattab, O., & Potts, C. ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems. NAACL 2024. arXiv:2311.09476.
+4. Liu, N. F., Lin, K., Hewitt, J., et al. Lost in the Middle: How Language Models Use Long Contexts. TACL 2024. arXiv:2307.03172.
+5. Gao, L., Ma, X., Lin, J., & Callan, J. Precise Zero-Shot Dense Retrieval without Relevance Labels. ACL 2023. arXiv:2212.10496.
+6. Asai, A., Wu, Z., Wang, Y., et al. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. ICLR 2024. arXiv:2310.11511.
+7. Yan, S.-Q., Gu, J.-C., Zhu, Y., & Ling, Z.-H. Corrective Retrieval Augmented Generation. arXiv:2401.15884, 2024.
+8. Yao, S., Zhao, J., Yu, D., et al. ReAct: Synergizing Reasoning and Acting in Language Models. ICLR 2023. arXiv:2210.03629.
+9. Shinn, N., Cassano, F., Berman, E., et al. Reflexion: Language Agents with Verbal Reinforcement Learning. NeurIPS 2023. arXiv:2303.11366.
+10. Liu, X., Yu, H., Zhang, H., et al. AgentBench: Evaluating LLMs as Agents. ICLR 2024. arXiv:2308.03688.
+11. Zhou, S., Xu, F. F., Zhu, H., et al. WebArena: A Realistic Web Environment for Building Autonomous Agents. ICLR 2024. arXiv:2307.13854.
+12. Jimenez, C. E., Yang, J., Wettig, A., et al. SWE-bench: Can Language Models Resolve Real-World GitHub Issues? ICLR 2024. arXiv:2310.06770.
+13. Yao, S., Shinn, N., Razavi, P., & Narasimhan, K. τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv:2406.12045, 2024.

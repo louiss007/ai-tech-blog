@@ -58,6 +58,10 @@ S_BQ = (
 )
 S_UL = "margin:0 0 18px;padding-left:24px;color:#374151;"
 S_LI = "margin:0 0 9px;line-height:1.8;font-size:16px;"
+S_REF_LI = (
+    "margin:0 0 10px;line-height:1.75;font-size:14px;color:#475569;"
+    "text-align:left;"
+)
 S_HR = "border:none;border-top:1px solid #e5e7eb;margin:34px 0;"
 S_STRONG = "color:#111827;font-weight:600;"
 S_EM = "color:#6b7280;font-style:normal;"
@@ -194,6 +198,7 @@ def md_to_html(md: str) -> str:
     out: list[str] = []
     i = 0
     n = len(lines)
+    in_refs = False
 
     while i < n:
         line = lines[i]
@@ -225,7 +230,10 @@ def md_to_html(md: str) -> str:
         m = re.match(r"^(#{1,4})\s+(.*)$", stripped)
         if m:
             level = len(m.group(1))
-            text = inline(m.group(2).strip())
+            raw_text = m.group(2).strip()
+            if level <= 2:
+                in_refs = raw_text == "参考文献"
+            text = inline(raw_text)
             styles = {1: S_H1, 2: S_H2, 3: S_H3, 4: S_H3}
             out.append(f'<h{level} style="{styles[level]}">{text}</h{level}>')
             i += 1
@@ -295,9 +303,10 @@ def md_to_html(md: str) -> str:
         if re.match(r"^\d+\.\s+", stripped):
             items = []
             start = int(re.match(r"^(\d+)\.", stripped).group(1))
+            li_style = S_REF_LI if in_refs else S_LI
             while i < n and re.match(r"^\d+\.\s+", lines[i].strip()):
                 item = re.sub(r"^\d+\.\s+", "", lines[i].strip())
-                items.append(f'<li style="{S_LI}">{inline(item)}</li>')
+                items.append(f'<li style="{li_style}">{inline(item)}</li>')
                 i += 1
             out.append(
                 f'<ol start="{start}" style="{S_UL}">{"".join(items)}</ol>'
