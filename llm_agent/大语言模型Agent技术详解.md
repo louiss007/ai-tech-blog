@@ -72,6 +72,10 @@ Agent 要解决的核心问题可以概括为一句话：**让模型围绕一个
 
 注意最后一行：**Agent 的价值不只是"能做更多"，而是"失败得更有信息量"。** 一个记录了自己每一步做了什么、哪一步失败的 Agent，比一个自信胡说的模型对工程系统友好得多。
 
+![Chatbot、RAG 与 Agent 的能力边界](images/fig01-evolution.png)
+
+*图 1：三类系统的能力边界对比——Agent 的关键增量是"行动"与"闭环"。*
+
 ---
 
 # 二、什么是大语言模型 Agent
@@ -126,6 +130,10 @@ Goal Understanding → Planning → Tool Use → Memory
   → 生成最终结果（交付）
 ```
 
+![Agent 的核心运行闭环](images/fig02-loop.png)
+
+*图 2：Agent 的运行闭环——状态在循环中持续更新，反馈可以回到规划层。*
+
 这个循环和人类做事的方式是同构的：先想清楚要干什么，找一个手段，做了之后看结果，根据结果决定继续、换路还是收工。差别在于，人类有稳定的世界模型和常识，而 LLM 没有，所以循环里的每一步都需要工程手段来约束。
 
 **一个重要的判断标准**：如果一个系统只是"模型生成一段文本，程序解析后执行一次"，那它是 Workflow；如果它能在执行过程中**根据观察结果改变后续动作序列**，它才具备 Agent 的核心特征。
@@ -160,6 +168,10 @@ Goal Understanding → Planning → Tool Use → Memory
 | Observation | 把执行结果转成模型可用的反馈 | 结果被截断、错误被吞掉 |
 | Reflection | 校验中间结论、发现偏差 | 自我强化错误、成本翻倍 |
 | Orchestrator | 控制循环、预算、异常、审计 | 死循环、超时、无法复盘 |
+
+![Agent 的核心组成模块](images/fig03-modules.png)
+
+*图 3：七个模块围绕同一个任务状态协作；LLM 只负责提议，执行权在外围。*
 
 ## 3.1 LLM 推理核心
 
@@ -655,6 +667,10 @@ Multi-Agent 的隐性成本很高：
 
 ## 4.5 四种模式对比
 
+![四种典型工作模式](images/fig04-patterns.png)
+
+*图 4：四种模式的控制流差异——灵活性、成本与可控性此消彼长。*
+
 | 维度 | ReAct | Plan-and-Execute | Multi-Agent | Human-in-the-loop |
 | --- | --- | --- | --- | --- |
 | 核心思想 | 边想边做，观察驱动 | 先规划后执行，计划驱动 | 角色分工，协作完成 | 人机共决策 |
@@ -706,6 +722,10 @@ Multi-Agent 的隐性成本很高：
 用户输入：
 
 > "请帮我比较 LangChain、LlamaIndex 和 AutoGen，判断哪个更适合构建企业内部知识库问答系统，并输出技术选型报告。"
+
+![技术选型报告的 Agent 执行流程](images/fig05-execution-flow.png)
+
+*图 5：15 个步骤归并为 7 个阶段；阶段 6 的缺口会触发回退追加检索。*
 
 下面按 15 个步骤拆解。每一步给出输入、输出、工具与工程难点。
 
@@ -829,22 +849,9 @@ Multi-Agent 的隐性成本很高：
 
 一个可落地的 Agent 系统，按职责可以分成五层：
 
-```
-┌──────────────────────────────────────────────────────────┐
-│  接入层：Web / IM / API / OpenAPI / 定时任务              │
-├──────────────────────────────────────────────────────────┤
-│  会话层：Session Manager / 上下文构建 / 多轮状态          │
-├──────────────────────────────────────────────────────────┤
-│  编排层：Orchestrator / Planner / Executor / State Machine│
-│          Reflection / Human Approval / Budget Control     │
-├──────────────────────────────────────────────────────────┤
-│  能力层：Tool Registry / Memory Store / Knowledge Base    │
-│          Vector DB / External APIs / Sandbox              │
-├──────────────────────────────────────────────────────────┤
-│  支撑层：Permission Control / Logging & Tracing /         │
-│          Evaluation / Cost Accounting / Audit             │
-└──────────────────────────────────────────────────────────┘
-```
+![LLM Agent 系统工程架构](images/fig06-architecture.png)
+
+*图 6：五层架构——编排层掌握控制权，能力层提供动作，支撑层提供权限、Trace、评估与审计。*
 
 **各模块说明**
 
@@ -1049,6 +1056,10 @@ def run_agent(user_input: str, session, registry, memory, tracer) -> dict:
     emit_metrics(state, answer)
     return answer
 ```
+
+![执行循环的控制流](images/fig07-control-flow.png)
+
+*图 7：循环的展开——主链路之外，校验失败、高风险、完成、超限各有明确出口。*
 
 **关键逻辑解释**
 

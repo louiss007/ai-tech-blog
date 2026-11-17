@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1000" viewBox="0 0 750 1000">
+  <rect width="750" height="1000" fill="#ffffff"/>
+  <defs>
+    <marker id="a-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+    <marker id="a-orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#d97706"/>
+    </marker>
+  </defs>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="46" text-anchor="middle" font-size="28" font-weight="700" fill="#0f172a">技术选型报告的 Agent 执行流程</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">一次真实任务如何被拆成 15 个步骤、7 个阶段</text>
+
+    <!-- Stage 1 -->
+    <rect x="110" y="118" width="470" height="76" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <circle cx="140" cy="156" r="16" fill="#2563eb"/>
+    <text x="140" y="161" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">1</text>
+    <text x="170" y="150" font-size="17" font-weight="600" fill="#0f172a">理解目标与约束</text>
+    <text x="170" y="171" font-size="11.5" fill="#475569">输入：原始请求 + 会话历史 + 用户画像</text>
+    <text x="170" y="186" font-size="11.5" fill="#64748b">输出：结构化目标 / 约束 / 待确认项</text>
+    <line x1="345" y1="194" x2="345" y2="226" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <!-- Stage 2 -->
+    <rect x="110" y="230" width="470" height="76" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <circle cx="140" cy="268" r="16" fill="#2563eb"/>
+    <text x="140" y="273" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">2</text>
+    <text x="170" y="262" font-size="17" font-weight="600" fill="#0f172a">拆解任务并制定计划</text>
+    <text x="170" y="283" font-size="11.5" fill="#475569">工具：Planner（结合可用工具清单）</text>
+    <text x="170" y="298" font-size="11.5" fill="#64748b">输出：任务 DAG + 完成判据 + 重试策略</text>
+    <line x1="345" y1="306" x2="345" y2="338" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <!-- Stage 3 -->
+    <rect x="110" y="342" width="470" height="76" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <circle cx="140" cy="380" r="16" fill="#2563eb"/>
+    <text x="140" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">3</text>
+    <text x="170" y="374" font-size="17" font-weight="600" fill="#0f172a">生成查询并检索阅读</text>
+    <text x="170" y="395" font-size="11.5" fill="#475569">工具：搜索 / 网页抓取 / 文档解析</text>
+    <text x="170" y="410" font-size="11.5" fill="#64748b">输出：候选来源 + 清洗后的正文</text>
+    <line x1="345" y1="418" x2="345" y2="450" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <!-- Stage 4 -->
+    <rect x="110" y="454" width="470" height="76" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <circle cx="140" cy="492" r="16" fill="#2563eb"/>
+    <text x="140" y="497" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">4</text>
+    <text x="170" y="486" font-size="17" font-weight="600" fill="#0f172a">抽取事实并交叉验证</text>
+    <text x="170" y="507" font-size="11.5" fill="#475569">工具：结构化抽取 / 规则比对 / 来源分级</text>
+    <text x="170" y="522" font-size="11.5" fill="#64748b">输出：带来源与置信度的事实条目</text>
+    <line x1="345" y1="530" x2="345" y2="562" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <!-- Stage 5 -->
+    <rect x="110" y="566" width="470" height="76" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <circle cx="140" cy="604" r="16" fill="#2563eb"/>
+    <text x="140" y="609" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">5</text>
+    <text x="170" y="598" font-size="17" font-weight="600" fill="#0f172a">对比分析并形成中间结论</text>
+    <text x="170" y="619" font-size="11.5" fill="#475569">工具：LLM 汇总 / 维度覆盖检查</text>
+    <text x="170" y="634" font-size="11.5" fill="#64748b">输出：对比矩阵 + 初步判断 + 证据链</text>
+    <line x1="345" y1="642" x2="345" y2="674" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <!-- Stage 6 -->
+    <rect x="110" y="678" width="470" height="76" rx="12" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+    <circle cx="140" cy="716" r="16" fill="#d97706"/>
+    <text x="140" y="721" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">6</text>
+    <text x="170" y="710" font-size="17" font-weight="600" fill="#0f172a">发现信息缺口并追加检索</text>
+    <text x="170" y="731" font-size="11.5" fill="#475569">工具：Reflection / 搜索 / 代码与仓库接口</text>
+    <text x="170" y="746" font-size="11.5" fill="#92400e">输出：缺口清单 + 补充证据（有次数上限）</text>
+    <line x1="345" y1="754" x2="345" y2="786" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <!-- Stage 7 -->
+    <rect x="110" y="790" width="470" height="76" rx="12" fill="#f0fdfa" stroke="#5eead4" stroke-width="2"/>
+    <circle cx="140" cy="828" r="16" fill="#0f766e"/>
+    <text x="140" y="833" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">7</text>
+    <text x="170" y="822" font-size="17" font-weight="600" fill="#0f172a">汇总、校验与交付</text>
+    <text x="170" y="843" font-size="11.5" fill="#475569">工具：模板渲染 / 引用完整性校验 / 文件写入</text>
+    <text x="170" y="858" font-size="11.5" fill="#0f766e">输出：带来源、时间与不确定性的报告</text>
+
+    <!-- Feedback loop -->
+    <path d="M 580 716 L 620 716 L 620 380 L 584 380" fill="none" stroke="#d97706" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#a-orange)"/>
+    <text x="636" y="548" text-anchor="middle" font-size="12" fill="#b45309" transform="rotate(90 636 548)">缺口 → 追加检索</text>
+
+    <!-- Budget band -->
+    <rect x="110" y="900" width="470" height="56" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="345" y="922" text-anchor="middle" font-size="12" fill="#334155">预算守门：最大步数 · 时间 · Token · 重规划次数</text>
+    <text x="345" y="941" text-anchor="middle" font-size="12" fill="#64748b">超限不崩溃，带缺口降级交付</text>
+
+    <text x="375" y="982" text-anchor="middle" font-size="12" fill="#94a3b8">阶段可并行：三个框架的检索与抽取互不依赖</text>
+  </g>
+</svg>

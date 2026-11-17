@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="790" viewBox="0 0 750 790">
+  <rect width="750" height="790" fill="#ffffff"/>
+  <defs>
+    <marker id="a-dark" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#475569"/>
+    </marker>
+    <marker id="a-orange" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#d97706"/>
+    </marker>
+  </defs>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="46" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">四种典型工作模式</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">控制流的组织方式，决定了灵活性、成本与可控性的取舍</text>
+
+    <!-- Panel 1: ReAct -->
+    <rect x="30" y="110" width="340" height="300" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="30" y="110" width="340" height="56" rx="14" fill="#2563eb"/>
+    <rect x="30" y="152" width="340" height="14" fill="#2563eb"/>
+    <text x="50" y="137" font-size="19" font-weight="700" fill="#ffffff">ReAct</text>
+    <text x="50" y="155" font-size="11" fill="#dbeafe">边推理边行动 · 观察驱动</text>
+
+    <rect x="50" y="182" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="200" y="204" text-anchor="middle" font-size="12" fill="#334155">用户目标 + 当前状态</text>
+    <line x1="200" y1="216" x2="200" y2="224" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="50" y="226" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="200" y="248" text-anchor="middle" font-size="12" fill="#334155">Thought：下一步做什么</text>
+    <line x1="200" y1="260" x2="200" y2="268" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="50" y="270" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="200" y="292" text-anchor="middle" font-size="12" fill="#334155">Action：工具 + 参数</text>
+    <line x1="200" y1="304" x2="200" y2="312" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="50" y="314" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="200" y="336" text-anchor="middle" font-size="12" fill="#334155">Observation：工具返回</text>
+    <path d="M 350 331 L 364 331 L 364 243 L 352 243" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#a-orange)"/>
+    <text x="200" y="382" text-anchor="middle" font-size="11" fill="#64748b">灵活，但容易短视、步数偏多</text>
+
+    <!-- Panel 2: Plan-and-Execute -->
+    <rect x="380" y="110" width="340" height="300" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="380" y="110" width="340" height="56" rx="14" fill="#0f766e"/>
+    <rect x="380" y="152" width="340" height="14" fill="#0f766e"/>
+    <text x="400" y="137" font-size="19" font-weight="700" fill="#ffffff">Plan-and-Execute</text>
+    <text x="400" y="155" font-size="11" fill="#ccfbf1">先规划后执行 · 计划驱动</text>
+
+    <rect x="400" y="182" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="550" y="204" text-anchor="middle" font-size="12" fill="#334155">Planner：生成计划 + 完成判据</text>
+    <line x1="550" y1="216" x2="550" y2="224" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="400" y="226" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="550" y="248" text-anchor="middle" font-size="12" fill="#334155">计划 DAG：T1 → T2 → T3（可并行）</text>
+    <line x1="550" y1="260" x2="550" y2="268" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="400" y="270" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="550" y="292" text-anchor="middle" font-size="12" fill="#334155">Executor：逐步执行子任务</text>
+    <line x1="550" y1="304" x2="550" y2="312" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="400" y="314" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="550" y="336" text-anchor="middle" font-size="12" fill="#334155">Replanner：按观察结果修正计划</text>
+    <path d="M 700 331 L 708 331 L 708 199 L 702 199" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#a-orange)"/>
+    <text x="550" y="382" text-anchor="middle" font-size="11" fill="#64748b">全局视野好，但初始计划可能失真</text>
+
+    <!-- Panel 3: Multi-Agent -->
+    <rect x="30" y="440" width="340" height="300" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="30" y="440" width="340" height="56" rx="14" fill="#7c3aed"/>
+    <rect x="30" y="482" width="340" height="14" fill="#7c3aed"/>
+    <text x="50" y="467" font-size="19" font-weight="700" fill="#ffffff">Multi-Agent</text>
+    <text x="50" y="485" font-size="11" fill="#ede9fe">角色分工 · 协作完成</text>
+
+    <rect x="50" y="512" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="200" y="534" text-anchor="middle" font-size="12" fill="#334155">Coordinator：分配任务 + 汇总</text>
+
+    <rect x="50" y="566" width="68" height="34" rx="7" fill="#ffffff" stroke="#c4b5fd"/>
+    <text x="84" y="587" text-anchor="middle" font-size="10" fill="#4c1d95">Planner</text>
+    <rect x="126" y="566" width="68" height="34" rx="7" fill="#ffffff" stroke="#c4b5fd"/>
+    <text x="160" y="587" text-anchor="middle" font-size="10" fill="#4c1d95">Researcher</text>
+    <rect x="202" y="566" width="68" height="34" rx="7" fill="#ffffff" stroke="#c4b5fd"/>
+    <text x="236" y="587" text-anchor="middle" font-size="10" fill="#4c1d95">Coder</text>
+    <rect x="278" y="566" width="68" height="34" rx="7" fill="#ffffff" stroke="#c4b5fd"/>
+    <text x="312" y="587" text-anchor="middle" font-size="10" fill="#4c1d95">Reviewer</text>
+
+    <line x1="84" y1="600" x2="84" y2="612" stroke="#475569" stroke-width="1.4" marker-end="url(#a-dark)"/>
+    <line x1="160" y1="600" x2="160" y2="612" stroke="#475569" stroke-width="1.4" marker-end="url(#a-dark)"/>
+    <line x1="236" y1="600" x2="236" y2="612" stroke="#475569" stroke-width="1.4" marker-end="url(#a-dark)"/>
+    <line x1="312" y1="600" x2="312" y2="612" stroke="#475569" stroke-width="1.4" marker-end="url(#a-dark)"/>
+    <rect x="50" y="614" width="300" height="32" rx="7" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="200" y="635" text-anchor="middle" font-size="11" fill="#5b21b6">共享黑板 / 消息总线</text>
+    <text x="200" y="682" text-anchor="middle" font-size="11" fill="#64748b">成本、一致性与调试难度都会放大</text>
+    <text x="200" y="704" text-anchor="middle" font-size="11" fill="#64748b">没有明确交接物时不要拆多 Agent</text>
+
+    <!-- Panel 4: HITL -->
+    <rect x="380" y="440" width="340" height="300" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect x="380" y="440" width="340" height="56" rx="14" fill="#d97706"/>
+    <rect x="380" y="482" width="340" height="14" fill="#d97706"/>
+    <text x="400" y="467" font-size="19" font-weight="700" fill="#ffffff">Human-in-the-loop</text>
+    <text x="400" y="485" font-size="11" fill="#fef3c7">关键节点由人决策</text>
+
+    <rect x="400" y="512" width="300" height="34" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="550" y="534" text-anchor="middle" font-size="12" fill="#334155">Agent 准备执行高风险动作</text>
+    <line x1="550" y1="546" x2="550" y2="554" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="400" y="556" width="300" height="34" rx="7" fill="#fffbeb" stroke="#fcd34d"/>
+    <text x="550" y="578" text-anchor="middle" font-size="12" fill="#92400e">审批卡片：动作 · 参数 · 影响</text>
+    <line x1="550" y1="590" x2="550" y2="598" stroke="#475569" stroke-width="1.5" marker-end="url(#a-dark)"/>
+    <rect x="400" y="600" width="92" height="32" rx="7" fill="#dcfce7" stroke="#86efac"/>
+    <text x="446" y="621" text-anchor="middle" font-size="12" fill="#166534">通过</text>
+    <rect x="504" y="600" width="92" height="32" rx="7" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="550" y="621" text-anchor="middle" font-size="12" fill="#1e40af">修改</text>
+    <rect x="608" y="600" width="92" height="32" rx="7" fill="#fee2e2" stroke="#fca5a5"/>
+    <text x="654" y="621" text-anchor="middle" font-size="12" fill="#991b1b">拒绝</text>
+    <text x="550" y="662" text-anchor="middle" font-size="11" fill="#64748b">通过 → 执行；修改 → 回填参数；拒绝 → 终止</text>
+    <text x="550" y="684" text-anchor="middle" font-size="11" fill="#64748b">适合金融、法律、运维、医疗等高风险场景</text>
+
+    <!-- Bottom note -->
+    <rect x="30" y="756" width="690" height="30" rx="15" fill="#0f172a"/>
+    <text x="375" y="776" text-anchor="middle" font-size="13" fill="#ffffff">生产形态：Workflow 定骨架 + ReAct 执行子任务 + 高风险节点 HITL</text>
+  </g>
+</svg>

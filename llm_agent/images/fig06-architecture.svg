@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="940" viewBox="0 0 750 940">
+  <rect width="750" height="940" fill="#ffffff"/>
+  <defs>
+    <marker id="a-blue" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#2563eb"/>
+    </marker>
+    <marker id="a-gray" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="46" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">LLM Agent 系统工程架构</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">编排层掌握控制权，能力层提供动作，支撑层保证可控</text>
+
+    <!-- L1 接入层 -->
+    <rect x="30" y="105" width="690" height="96" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="45" y="146" font-size="16" font-weight="700" fill="#0f172a">接入层</text>
+    <text x="45" y="165" font-size="11" fill="#64748b">请求入口</text>
+    <rect x="155" y="132" width="120" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="215" y="158" text-anchor="middle" font-size="13" fill="#334155">Web</text>
+    <rect x="289" y="132" width="120" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="349" y="158" text-anchor="middle" font-size="13" fill="#334155">IM / 企微</text>
+    <rect x="423" y="132" width="120" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="483" y="158" text-anchor="middle" font-size="13" fill="#334155">OpenAPI</text>
+    <rect x="557" y="132" width="120" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="617" y="158" text-anchor="middle" font-size="13" fill="#334155">定时任务</text>
+
+    <!-- L2 会话层 -->
+    <rect x="30" y="216" width="690" height="96" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="45" y="257" font-size="16" font-weight="700" fill="#0f172a">会话层</text>
+    <text x="45" y="276" font-size="11" fill="#64748b">上下文与状态</text>
+    <rect x="155" y="243" width="160" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="235" y="269" text-anchor="middle" font-size="13" fill="#334155">Session Manager</text>
+    <rect x="330" y="243" width="160" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="410" y="269" text-anchor="middle" font-size="13" fill="#334155">上下文构建</text>
+    <rect x="505" y="243" width="160" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="585" y="269" text-anchor="middle" font-size="13" fill="#334155">多轮状态与偏好</text>
+
+    <!-- L3 编排层 -->
+    <rect x="30" y="327" width="690" height="170" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="45" y="372" font-size="16" font-weight="700" fill="#0f172a">编排层</text>
+    <text x="45" y="391" font-size="11" fill="#64748b">控制执行循环</text>
+    <rect x="155" y="348" width="540" height="42" rx="8" fill="#0f172a"/>
+    <text x="425" y="374" text-anchor="middle" font-size="13" fill="#ffffff">Orchestrator · 状态机 / 预算 / 重试 / Checkpoint</text>
+    <rect x="155" y="410" width="100" height="54" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="205" y="433" text-anchor="middle" font-size="12" fill="#1e3a8a">Planner</text>
+    <text x="205" y="450" text-anchor="middle" font-size="10" fill="#64748b">任务拆解</text>
+    <rect x="265" y="410" width="100" height="54" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="315" y="433" text-anchor="middle" font-size="12" fill="#1e3a8a">Executor</text>
+    <text x="315" y="450" text-anchor="middle" font-size="10" fill="#64748b">单步执行</text>
+    <rect x="375" y="410" width="100" height="54" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="425" y="433" text-anchor="middle" font-size="12" fill="#1e3a8a">Reflection</text>
+    <text x="425" y="450" text-anchor="middle" font-size="10" fill="#64748b">校验重规划</text>
+    <rect x="485" y="410" width="100" height="54" rx="8" fill="#fffbeb" stroke="#fcd34d"/>
+    <text x="535" y="433" text-anchor="middle" font-size="12" fill="#92400e">人工审批</text>
+    <text x="535" y="450" text-anchor="middle" font-size="10" fill="#a16207">高风险动作</text>
+    <rect x="595" y="410" width="100" height="54" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="645" y="433" text-anchor="middle" font-size="12" fill="#1e3a8a">预算与终止</text>
+    <text x="645" y="450" text-anchor="middle" font-size="10" fill="#64748b">步数 / 成本</text>
+
+    <!-- L4 能力层 -->
+    <rect x="30" y="512" width="690" height="150" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="45" y="557" font-size="16" font-weight="700" fill="#0f172a">能力层</text>
+    <text x="45" y="576" font-size="11" fill="#64748b">工具与数据</text>
+    <rect x="155" y="530" width="170" height="44" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="240" y="557" text-anchor="middle" font-size="13" fill="#0f766e">工具注册表</text>
+    <rect x="340" y="530" width="170" height="44" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="425" y="557" text-anchor="middle" font-size="13" fill="#0f766e">记忆存储</text>
+    <rect x="525" y="530" width="170" height="44" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="610" y="557" text-anchor="middle" font-size="13" fill="#0f766e">企业知识库</text>
+    <rect x="155" y="586" width="170" height="44" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="240" y="613" text-anchor="middle" font-size="13" fill="#0f766e">向量数据库</text>
+    <rect x="340" y="586" width="170" height="44" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="425" y="613" text-anchor="middle" font-size="13" fill="#0f766e">外部 API</text>
+    <rect x="525" y="586" width="170" height="44" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+    <text x="610" y="613" text-anchor="middle" font-size="13" fill="#0f766e">沙箱执行</text>
+
+    <!-- L5 支撑层 -->
+    <rect x="30" y="677" width="690" height="110" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="45" y="722" font-size="16" font-weight="700" fill="#0f172a">支撑层</text>
+    <text x="45" y="741" font-size="11" fill="#64748b">横向贯穿</text>
+    <rect x="155" y="695" width="100" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="205" y="722" text-anchor="middle" font-size="12" fill="#334155">权限控制</text>
+    <rect x="265" y="695" width="100" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="315" y="722" text-anchor="middle" font-size="12" fill="#334155">日志 Trace</text>
+    <rect x="375" y="695" width="100" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="425" y="722" text-anchor="middle" font-size="12" fill="#334155">评估系统</text>
+    <rect x="485" y="695" width="100" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="535" y="722" text-anchor="middle" font-size="12" fill="#334155">成本账本</text>
+    <rect x="595" y="695" width="100" height="44" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="645" y="722" text-anchor="middle" font-size="12" fill="#334155">审计回放</text>
+
+    <!-- Layer arrows -->
+    <line x1="90" y1="201" x2="90" y2="214" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a-blue)"/>
+    <line x1="90" y1="312" x2="90" y2="325" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a-blue)"/>
+    <line x1="90" y1="497" x2="90" y2="510" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a-blue)"/>
+    <line x1="90" y1="662" x2="90" y2="675" stroke="#2563eb" stroke-width="1.8" marker-end="url(#a-blue)"/>
+
+    <!-- External systems -->
+    <rect x="155" y="815" width="540" height="60" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="425" y="840" text-anchor="middle" font-size="12.5" fill="#334155">外部系统：搜索引擎 · 企业 API · 数据库 · 浏览器 · 内部平台</text>
+    <text x="425" y="860" text-anchor="middle" font-size="11" fill="#64748b">统一经工具网关：鉴权 · 限流 · 超时 · 审计</text>
+    <path d="M 695 608 L 732 608 L 732 845 L 698 845" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#a-gray)"/>
+
+    <text x="375" y="912" text-anchor="middle" font-size="12" fill="#94a3b8">所有层共享同一套权限、Trace 与成本口径，避免决策、审计两套事实</text>
+  </g>
+</svg>

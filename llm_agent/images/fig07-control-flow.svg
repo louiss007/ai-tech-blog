@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="850" viewBox="0 0 750 850">
+  <rect width="750" height="850" fill="#ffffff"/>
+  <defs>
+    <marker id="a-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+    <marker id="a-orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#d97706"/>
+    </marker>
+  </defs>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="46" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">执行循环的控制流</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">主循环之外，每类异常都有明确的出口</text>
+
+    <!-- Center steps -->
+    <rect x="210" y="118" width="330" height="52" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="375" y="150" text-anchor="middle" font-size="15" font-weight="600" fill="#0f172a">构建上下文（状态 + 记忆 + 近期观察）</text>
+    <line x1="375" y1="170" x2="375" y2="196" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <rect x="210" y="198" width="330" height="52" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="375" y="230" text-anchor="middle" font-size="15" font-weight="600" fill="#0f172a">模型选择动作：工具 / 重规划 / 收尾</text>
+    <line x1="375" y1="250" x2="375" y2="276" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <rect x="210" y="278" width="330" height="52" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="375" y="310" text-anchor="middle" font-size="15" font-weight="600" fill="#0f172a">参数校验 + 权限校验 + 审批判断</text>
+    <line x1="375" y1="330" x2="375" y2="356" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <rect x="210" y="358" width="330" height="52" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="375" y="390" text-anchor="middle" font-size="15" font-weight="600" fill="#0f172a">执行工具（超时 · 重试 · 熔断）</text>
+    <line x1="375" y1="410" x2="375" y2="436" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <rect x="210" y="438" width="330" height="52" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="375" y="470" text-anchor="middle" font-size="15" font-weight="600" fill="#0f172a">观察结果（规范化 · 截断 · 错误分类）</text>
+    <line x1="375" y1="490" x2="375" y2="516" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <rect x="210" y="518" width="330" height="52" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="375" y="550" text-anchor="middle" font-size="15" font-weight="600" fill="#0f172a">更新状态与记忆（不阻塞主循环）</text>
+    <line x1="375" y1="570" x2="375" y2="596" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <rect x="210" y="598" width="330" height="52" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="2"/>
+    <text x="375" y="630" text-anchor="middle" font-size="15" font-weight="600" fill="#92400e">反思校验 + 完成判据判断</text>
+    <line x1="375" y1="650" x2="375" y2="676" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <rect x="210" y="678" width="330" height="52" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="375" y="710" text-anchor="middle" font-size="15" font-weight="600" fill="#9a3412">预算 / 步数 / 超时检查</text>
+
+    <!-- Left loop -->
+    <path d="M 210 704 L 150 704 L 150 144 L 208 144" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#a-blue)"/>
+    <text x="138" y="424" text-anchor="middle" font-size="12" fill="#1e40af" transform="rotate(-90 138 424)">继续 / 重规划 → 下一轮</text>
+
+    <!-- Right branches -->
+    <rect x="570" y="282" width="160" height="48" rx="9" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.8"/>
+    <text x="650" y="302" text-anchor="middle" font-size="12.5" font-weight="600" fill="#991b1b">结构化错误回填</text>
+    <text x="650" y="319" text-anchor="middle" font-size="10.5" fill="#b91c1c">进入 Observation</text>
+    <line x1="540" y1="304" x2="568" y2="304" stroke="#d97706" stroke-width="1.8" marker-end="url(#a-orange)"/>
+    <text x="554" y="296" text-anchor="middle" font-size="9.5" fill="#b45309">校验失败</text>
+
+    <rect x="570" y="362" width="160" height="48" rx="9" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.8"/>
+    <text x="650" y="382" text-anchor="middle" font-size="12.5" font-weight="600" fill="#92400e">等待人工审批</text>
+    <text x="650" y="399" text-anchor="middle" font-size="10.5" fill="#a16207">通过后从断点恢复</text>
+    <line x1="540" y1="384" x2="568" y2="384" stroke="#d97706" stroke-width="1.8" marker-end="url(#a-orange)"/>
+    <text x="554" y="376" text-anchor="middle" font-size="9.5" fill="#b45309">高风险</text>
+
+    <rect x="570" y="602" width="160" height="48" rx="9" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.8"/>
+    <text x="650" y="622" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0f766e">生成最终结果</text>
+    <text x="650" y="639" text-anchor="middle" font-size="10.5" fill="#0f766e">带来源与不确定性</text>
+    <line x1="540" y1="624" x2="568" y2="624" stroke="#d97706" stroke-width="1.8" marker-end="url(#a-orange)"/>
+    <text x="554" y="616" text-anchor="middle" font-size="9.5" fill="#b45309">判据满足</text>
+
+    <rect x="570" y="682" width="160" height="48" rx="9" fill="#fff7ed" stroke="#fdba74" stroke-width="1.8"/>
+    <text x="650" y="702" text-anchor="middle" font-size="12.5" font-weight="600" fill="#9a3412">降级交付</text>
+    <text x="650" y="719" text-anchor="middle" font-size="10.5" fill="#c2410c">标注缺口与未完成项</text>
+    <line x1="540" y1="704" x2="568" y2="704" stroke="#d97706" stroke-width="1.8" marker-end="url(#a-orange)"/>
+    <text x="554" y="696" text-anchor="middle" font-size="9.5" fill="#b45309">超限</text>
+
+    <!-- Bottom -->
+    <rect x="60" y="772" width="630" height="52" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="375" y="794" text-anchor="middle" font-size="13" fill="#334155">终止路径必须由执行控制器显式处理：完成 · 拒绝 · 挂起 · 降级交付</text>
+    <text x="375" y="813" text-anchor="middle" font-size="12" fill="#64748b">不允许“模型觉得差不多了”成为唯一的停止条件</text>
+  </g>
+</svg>

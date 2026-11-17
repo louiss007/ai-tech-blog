@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="700" viewBox="0 0 750 700">
+  <rect width="750" height="700" fill="#ffffff"/>
+  <defs>
+    <marker id="a-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="a-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <g font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+    <text x="375" y="46" text-anchor="middle" font-size="29" font-weight="700" fill="#0f172a">Agent 的核心组成模块</text>
+    <text x="375" y="78" text-anchor="middle" font-size="16" fill="#64748b">LLM 负责决策，外围模块负责让决策可执行、可记忆、可纠错</text>
+
+    <!-- 用户目标 -->
+    <rect x="285" y="88" width="180" height="48" rx="24" fill="#0f172a"/>
+    <text x="375" y="118" text-anchor="middle" font-size="16" font-weight="600" fill="#ffffff">用户目标</text>
+    <line x1="375" y1="136" x2="375" y2="148" stroke="#2563eb" stroke-width="2.2" marker-end="url(#a-blue)"/>
+
+    <!-- Orchestrator frame -->
+    <rect x="40" y="150" width="670" height="435" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.8"/>
+    <text x="60" y="180" font-size="15" font-weight="700" fill="#334155">Orchestrator · 执行控制器</text>
+    <text x="690" y="180" text-anchor="end" font-size="12" fill="#64748b">预算 / 超时 / 重试 / 审批 / Trace</text>
+
+    <!-- Modules -->
+    <rect x="70" y="230" width="160" height="64" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="150" y="257" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">任务规划</text>
+    <text x="150" y="278" text-anchor="middle" font-size="11" fill="#64748b">拆解 · 依赖 · 重规划</text>
+
+    <rect x="520" y="230" width="160" height="64" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="600" y="257" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">工具调用</text>
+    <text x="600" y="278" text-anchor="middle" font-size="11" fill="#64748b">搜索 · DB · API · 沙箱</text>
+
+    <rect x="70" y="400" width="160" height="64" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="150" y="427" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">反思校验</text>
+    <text x="150" y="448" text-anchor="middle" font-size="11" fill="#64748b">自检 · Critic · 验证</text>
+
+    <rect x="520" y="400" width="160" height="64" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="600" y="427" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">观察反馈</text>
+    <text x="600" y="448" text-anchor="middle" font-size="11" fill="#64748b">结果解析 · 错误恢复</text>
+
+    <rect x="295" y="470" width="160" height="64" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="2"/>
+    <text x="375" y="497" text-anchor="middle" font-size="16" font-weight="600" fill="#0f172a">记忆系统</text>
+    <text x="375" y="518" text-anchor="middle" font-size="11" fill="#64748b">短期 · 长期 · 任务状态</text>
+
+    <!-- LLM core -->
+    <rect x="280" y="320" width="190" height="110" rx="16" fill="#0f172a"/>
+    <text x="375" y="367" text-anchor="middle" font-size="19" font-weight="700" fill="#ffffff">LLM 推理核心</text>
+    <text x="375" y="392" text-anchor="middle" font-size="12" fill="#cbd5e1">语义理解 · 决策 · 生成</text>
+    <text x="375" y="411" text-anchor="middle" font-size="11" fill="#94a3b8">只提议，不直接执行</text>
+
+    <!-- Connections -->
+    <line x1="150" y1="294" x2="276" y2="340" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#a-gray)"/>
+    <line x1="600" y1="294" x2="474" y2="340" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#a-gray)"/>
+    <line x1="150" y1="400" x2="276" y2="390" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#a-gray)"/>
+    <line x1="600" y1="400" x2="474" y2="390" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#a-gray)"/>
+    <line x1="375" y1="470" x2="375" y2="434" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#a-gray)"/>
+
+    <!-- Exit -->
+    <line x1="375" y1="585" x2="375" y2="606" stroke="#0f766e" stroke-width="2.2" marker-end="url(#a-blue)"/>
+    <rect x="285" y="608" width="180" height="48" rx="24" fill="#0f766e"/>
+    <text x="375" y="638" text-anchor="middle" font-size="16" font-weight="600" fill="#ffffff">最终结果</text>
+
+    <text x="375" y="680" text-anchor="middle" font-size="12" fill="#64748b">模块之间不是流水线，而是围绕同一个任务状态的持续读写</text>
+  </g>
+</svg>
