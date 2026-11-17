@@ -8,10 +8,10 @@
 
 | 文件 | 内容 | 正文约 |
 |---|---|---|
-| `part1.md` / `part1.html` | 上篇：为什么评估、评什么、难在哪 | 2400 字，12 条文献 |
-| `part2.md` / `part2.html` | 中篇：六种方法与七类指标 | 2700 字，11 条文献 |
-| `part3.md` / `part3.html` | 下篇：RAG、Agent 与企业评估集 | 2600 字，13 条文献 |
-| `part4.md` / `part4.html` | 终篇：平台、伪代码、Judge、报告与门禁 | 2300 字，11 条文献 |
+| `part1.md` / `part1.html` | 上篇：为什么评估、评什么、难在哪 | 约 2600 字，12 条文献 |
+| `part2.md` / `part2.html` | 中篇：六种方法与七类指标 | 约 2800 字，11 条文献 |
+| `part3.md` / `part3.html` | 下篇：RAG、Agent 与企业评估集 | 约 2700 字，13 条文献 |
+| `part4.md` / `part4.html` | 终篇：平台、伪代码、Judge、报告与门禁 | 约 2400 字，11 条文献 |
 | `images/fig01–08.svg/png` | 8 张配图的矢量源文件与 2x PNG | — |
 | `build_wechat.py` | Markdown → 内联样式 HTML | — |
 | `render_diagrams.py` | SVG → 2x PNG（Playwright） | — |
